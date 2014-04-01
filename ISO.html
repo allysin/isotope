@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Isotoped Aldridge</title>
+<link rel="stylesheet" href="stylesISO.css">
+<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+<script src="js/jquery.isotope.js" type="text/javascript"></script>
+</head>
+<body>
+ 
+<script type="text/javascript">
+ $(window).load(function(){
+    var $container = $('.portfolioContainer');
+    $container.isotope({
+        filter: '*',
+        animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false
+        }
+    });
+ 
+    $('.portfolioFilter a').click(function(){
+        $('.portfolioFilter .current').removeClass('current');
+        $(this).addClass('current');
+ 
+        var selector = $(this).attr('data-filter');
+        $container.isotope({
+            filter: selector,
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }
+         });
+         return false;
+    });
+});
+ 
+</script>
+
+
+<div class="portfolioFilter">
+ 
+    <a href="#" data-filter="*" class="current">All Categories</a>
+    <a href="#" data-filter=".people">People</a>
+    <a href="#" data-filter=".places">Places</a>
+    <a href="#" data-filter=".artifacts">Artifacts</a>
+    <a href="#" data-filter=".theater">Theaters</a>
+ 
+</div>
+ 
+<div class="portfolioContainer">
+ 
+    <div class="theater places">
+        <img src="images/AdelphiTheatreDublin.jpg" alt="image">
+    </div>
+ 
+    <div class="artifacts">
+        <img src="images/AldridgeLetter1853a.jpg" alt="image">
+    </div>   
+ 
+    <div class="people">
+        <img src="images/AphraBehn.jpg" alt="image">
+    </div>
+     
+    <div class="places">
+        <img src="images/ArundelCastle2007.jpg" alt="image">
+    </div>
+ 
+    <div class="theater artifacts">
+        <img src="images/Birminghamplaybill1848.jpg" alt="image">
+    </div>
+ 
+    <div class="places theater">
+        <img src="images/Birmingham theatre, 1805.jpg" alt="image">
+    </div>
+ 
+    <div class="artifacts">
+        <img src="images/AldridgeLetter1853b.jpg" alt="image">
+    </div>   
+     
+    <div class="places">
+        <img src="images/ArundelCastle2011.jpg" alt="image">
+    </div>   
+    
+    <div class="places theater">
+        <img src="images/Coburg Theater, 2013a.jpg" alt="image">
+    </div> 
+    
+      <div class="places theater">
+        <img src="images/Coburg Theater, 2013b.jpg" alt="image">
+    </div> 
+    
+      <div class="places theater">
+        <img src="images/CoburgTheater1822.jpg" alt="image">
+    </div> 
+    
+    <div class="places theater artifacts">
+        <img src="images/Covent Garden playbill, 1833.jpg" alt="image">
+    </div> 
+    <div class="places theater artifacts">
+        <img src="images/Ginger Blue.jpg" alt="image">
+    </div>
+    
+ 
+</div>
+</body>
+</html> 
+
